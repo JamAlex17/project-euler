@@ -1,13 +1,14 @@
-// 086.cpp : Defines the entry point for the console application.
+// 004.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
 #include <math.h>
 #include <time.h>
 #include <stdio.h>
 
-#define  VALUE 1000000
+#define  DIGITS 3
 
 using namespace std;
 
@@ -43,11 +44,16 @@ private:
 };
 
 
-bool check_int_sqrt(long long x)
+bool is_palindromic(int n)
 {
-	long long result = (long long)sqrt(x);
-	return (result*result == x);
+	string s = to_string(n);
+	//cout << "n = " << n << endl;
+	if (equal(s.begin(), s.begin() + s.size() / 2, s.rbegin()))
+		return true;
+	else
+		return false;	
 }
+
 
 int main()
 {
@@ -57,31 +63,24 @@ int main()
 	Timer timer;
 	timer.start();
 
-	//fibonacci(10);
-	
-	for (long long l = 1;; l++)
-	{
-		for (long long wh= 2; wh <= 2 * l; wh++)
-		{
-			if (check_int_sqrt(l*l + wh*wh))
-			{				
-				temp += (wh > l) ? l + 1 - (wh + 1) / 2 : wh / 2;
-				..cout << "wh=" << wh << " l=" << l << "temp=" << temp << endl;
-			}
-		}
 
-		if (temp >= VALUE)
+	for (int i = 999; i > 100; i--)
+	{
+		for (int j = 999; j > 100; j--)
 		{
-			result = l;
-			break;
+
+			int mul = i*j;
+			if (is_palindromic(mul))
+			{
+				if (result < mul) result = mul;
+				break;
+			}
 		}
 	}
 
+	timer.stop();
 
 	cout << "result = " << result << endl;
-
-	timer.stop();
-	
 	printf("Elapsed time is %.2lf milliseconds.", timer.elapsed_ms());
 	getchar();
 	return 0;
