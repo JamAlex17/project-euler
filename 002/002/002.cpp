@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 
-#define  MAX_VALUE 4000000
+const int cMaxValue = 4000000;
 
 using namespace std;
 
@@ -28,7 +28,7 @@ int main()
 		fib_prev = fib_curr;
 		fib_curr = fib_result;		
 		
-		if (fib_result < MAX_VALUE)
+		if (fib_result < cMaxValue)
 		{
 			cout << "fib(" << i++ << ") = " << fib_result << endl;
 

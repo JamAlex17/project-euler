@@ -8,7 +8,7 @@
 #include <time.h>
 #include <stdio.h>
 
-#define  NUMBER 100
+const int cNumber = 100;
 
 using namespace std;
 
@@ -45,8 +45,8 @@ private:
 int problem_006()
 {
 	int result = 0;
-	int sum_squares = NUMBER*(NUMBER+1)*(2*NUMBER+1)/6;	
-	int sum_natural = (1 + NUMBER)*NUMBER / 2;
+	int sum_squares = cNumber*(cNumber +1)*(2*cNumber+1)/6;
+	int sum_natural = (1 + cNumber)*cNumber / 2;
 	result = sum_natural*sum_natural - sum_squares;
 
 	return result;

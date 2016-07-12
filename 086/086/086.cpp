@@ -7,10 +7,9 @@
 #include <time.h>
 #include <stdio.h>
 
-#define  VALUE 1000000
+const int cValue = 1000000;
 
 using namespace std;
-
 
 class Timer
 {
@@ -66,17 +65,16 @@ int main()
 			if (check_int_sqrt(l*l + wh*wh))
 			{				
 				temp += (wh > l) ? l + 1 - (wh + 1) / 2 : wh / 2;
-				..cout << "wh=" << wh << " l=" << l << "temp=" << temp << endl;
+				cout << "wh=" << wh << " l=" << l << " temp=" << temp << endl;
 			}
 		}
 
-		if (temp >= VALUE)
+		if (temp >= cValue)
 		{
 			result = l;
 			break;
 		}
 	}
-
 
 	cout << "result = " << result << endl;
 

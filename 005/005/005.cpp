@@ -13,10 +13,9 @@
 #include <time.h>
 #include <stdio.h>
 
-#define  NUMBER 20
+const int  cNumber = 20;
 
 using namespace std;
-
 
 class Timer
 {
@@ -53,11 +52,11 @@ int problem_005()
 	int nok = 0, count;	
 	for (int i = 2;; i++) {
 		count = 0;
-		for (int j = 1; j <= NUMBER; j++) {
+		for (int j = 1; j <= cNumber; j++) {
 			if (i % j == 0)
 				count++;
 		}
-		if (count == NUMBER) {
+		if (count == cNumber) {
 			nok = i;
 			break;
 		}

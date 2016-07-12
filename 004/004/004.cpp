@@ -8,10 +8,7 @@
 #include <time.h>
 #include <stdio.h>
 
-#define  DIGITS 3
-
 using namespace std;
-
 
 class Timer
 {

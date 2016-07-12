@@ -8,7 +8,7 @@
 #include <time.h>
 #include <stdio.h>
 
-#define  NUMBER 2000000
+const int cNumber = 2000000;
 
 using namespace std;
 
@@ -61,7 +61,7 @@ long long problem_010()
 
 		if (prime)
 		{			
-			if (i >= NUMBER)
+			if (i >= cNumber)
 				return sum;			
 			else
 				sum += i;

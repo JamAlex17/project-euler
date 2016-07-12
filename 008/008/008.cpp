@@ -6,7 +6,7 @@
 #include <sstream>
 #include <string>
 
-#define DIGITS 13
+const int  cDigits = 13;
 
 using namespace std;
 
@@ -40,10 +40,10 @@ int main()
 	string str1000digits = ss.str();
 	const char *ch1000digits = str1000digits.c_str();
 
-	for (int i = 0; i < (str1000digits.length() - DIGITS + 1); i++)
+	for (int i = 0; i < (str1000digits.length() - cDigits + 1); i++)
 	{
 		unsigned long long temp = 1;
-		for (int digits = 0; digits < DIGITS; digits++)
+		for (int digits = 0; digits < cDigits; digits++)
 		{
 			temp *= (ch1000digits[i+digits] - '0');
 		}

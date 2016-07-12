@@ -8,7 +8,7 @@
 #include <time.h>
 #include <stdio.h>
 
-#define  NUMBER 10001
+const int  cNumber = 10001;
 
 using namespace std;
 
@@ -62,7 +62,7 @@ int problem_007()
 		if (prime)
 		{
 			cnt++;
-			if (cnt == NUMBER)
+			if (cnt == cNumber)
 			{
 				return i;
 			}

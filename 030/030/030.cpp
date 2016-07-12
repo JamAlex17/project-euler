@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 
-#define MAX_NUMBER 9 * 9 * 9 * 9 * 9 * 9 * 5
+const int cMaxNumber = 9 * 9 * 9 * 9 * 9 * 9 * 5;
 
 using namespace std;
 
@@ -12,7 +12,7 @@ int main()
 {
 	int total_all = 0;
 
-	for (int i = 2; i < MAX_NUMBER; i++)
+	for (int i = 2; i < cMaxNumber; i++)
 	{
 		int total = 0;
 		int n = i;

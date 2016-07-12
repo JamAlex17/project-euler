@@ -4,8 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 
-//#define  NUMBER 13195
-#define  NUMBER 600851475143
+const long long cNumber = 600851475143;
 
 using namespace std;
 
@@ -15,7 +14,7 @@ unsigned long long findPrimes(unsigned long long value, unsigned long long* resu
 	{
 		if (value % i == 0)
 		{
-			if (value != NUMBER) cout << " * ";			
+			if (value != cNumber) cout << " * ";
 			if (i > *result) *result = i;
 			cout << i;
 			return findPrimes(value / i, result);
@@ -27,9 +26,9 @@ unsigned long long findPrimes(unsigned long long value, unsigned long long* resu
 int main()
 {
 	unsigned long long result = 0;
-	cout << NUMBER << " = ";	
+	cout << cNumber << " = ";
 
-	findPrimes(NUMBER, &result);
+	findPrimes(cNumber, &result);
 
 	cout << endl << "result = " << result << endl;
 	getchar();
